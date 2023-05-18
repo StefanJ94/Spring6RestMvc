@@ -28,7 +28,7 @@
 			"response": []
 		},
 		{
-			"name": "GET BY ID",
+			"name": "GET BEER BY ID",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -44,6 +44,49 @@
 						"v1",
 						"beer",
 						"b80278dd-8e88-4596-9d83-bda3b20a921f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ALL CUSTOMERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET CUSTOMER BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/customer/6f98ef83-8ff0-4eca-a178-5898d8a9646a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"customer",
+						"6f98ef83-8ff0-4eca-a178-5898d8a9646a"
 					]
 				}
 			},
