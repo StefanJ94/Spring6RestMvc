@@ -91,6 +91,42 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "POST BEER",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"beerName\": \"LAV Premium\",\r\n        \"beerStyle\": \"LAGER\",\r\n        \"upc\": \"12356213\",\r\n        \"quantityOnHand\": 106,\r\n        \"price\": 10.229\r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/beer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"beer"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
