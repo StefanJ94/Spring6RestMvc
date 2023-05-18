@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "fca1431b-8cef-4869-a9f2-d72fb4f9089d",
+		"name": "Spring Guru",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22149666"
+	},
+	"item": [
+		{
+			"name": "GET ALL BEERS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/beer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"beer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET BY ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/beer/b80278dd-8e88-4596-9d83-bda3b20a921f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"beer",
+						"b80278dd-8e88-4596-9d83-bda3b20a921f"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
