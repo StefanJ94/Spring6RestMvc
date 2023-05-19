@@ -157,6 +157,37 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "PUT - update Beer by ID",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"beerName\": \"Sunshine City UPDATED\",\r\n        \"beerStyle\": \"IPA\",\r\n        \"upc\": \"123563\",\r\n        \"quantityOnHand\": 1244,\r\n        \"price\": 13.929\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/beer/52e25c9a-1432-4903-9123-1e9178ff8b05",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"beer",
+						"52e25c9a-1432-4903-9123-1e9178ff8b05"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
