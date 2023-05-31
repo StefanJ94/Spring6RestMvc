@@ -241,6 +241,14 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "DELETE CUSTOMER BY ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
