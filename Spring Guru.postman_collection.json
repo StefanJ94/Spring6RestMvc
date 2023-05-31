@@ -249,6 +249,37 @@
 				"header": []
 			},
 			"response": []
+		},
+		{
+			"name": "PATCH - Beer",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"upc\": \"00222\",\r\n        \"quantityOnHand\": 300\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/beer/50e4b06e-fa9b-46af-a2ed-004007f344c2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"beer",
+						"50e4b06e-fa9b-46af-a2ed-004007f344c2"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
