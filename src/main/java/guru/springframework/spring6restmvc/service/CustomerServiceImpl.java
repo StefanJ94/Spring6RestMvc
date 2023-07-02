@@ -43,20 +43,34 @@ public class CustomerServiceImpl implements CustomerService {
         customerMap.put(customer3.getId(), customer3);
     }
 
-
     @Override
-    public Optional<CustomerDTO> getCustomerById(UUID uuid) {
-        return Optional.of(customerMap.get(uuid));
+    public Optional<CustomerDTO> patchCustomerById(UUID customerId, CustomerDTO customer) {
+        CustomerDTO existing = customerMap.get(customerId);
+
+        if (StringUtils.hasText(customer.getName())) {
+            existing.setName(customer.getName());
+        }
+
+        return Optional.of(existing);
     }
 
     @Override
-    public List<CustomerDTO> getAllCustomers() {
-        return new ArrayList<>(customerMap.values());
+    public Boolean deleteCustomerById(UUID customerId) {
+        customerMap.remove(customerId);
 
+        return true;
+    }
+
+    @Override
+    public Optional<CustomerDTO> updateCustomerById(UUID customerId, CustomerDTO customer) {
+        CustomerDTO existing = customerMap.get(customerId);
+        existing.setName(customer.getName());
+        return Optional.of(existing);
     }
 
     @Override
     public CustomerDTO saveNewCustomer(CustomerDTO customer) {
+
         CustomerDTO savedCustomer = CustomerDTO.builder()
                 .id(UUID.randomUUID())
                 .version(1)
@@ -71,23 +85,12 @@ public class CustomerServiceImpl implements CustomerService {
     }
 
     @Override
-    public void updateCustomerById(UUID customerId, CustomerDTO customer) {
-
-        CustomerDTO existing = customerMap.get(customerId);
-        existing.setName(customer.getName());
+    public Optional<CustomerDTO> getCustomerById(UUID uuid) {
+        return Optional.of(customerMap.get(uuid));
     }
 
     @Override
-    public void deleteCustomerById(UUID customerId) {
-        customerMap.remove(customerId);
-    }
-
-    @Override
-    public void patchCustomerById(UUID customerId, CustomerDTO customer) {
-        CustomerDTO existing = customerMap.get(customerId);
-
-        if (StringUtils.hasText(customer.getName())) {
-            existing.setName(customer.getName());
-        }
+    public List<CustomerDTO> getAllCustomers() {
+        return new ArrayList<>(customerMap.values());
     }
 }
